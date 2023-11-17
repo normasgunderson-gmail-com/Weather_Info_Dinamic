@@ -1,0 +1,107 @@
+body {
+  margin: 0;
+  margin-top: 180px;
+  font-family: Georgia, 'Times New Roman', Times, serif'
+}
+.container {
+  /* background-color: rgb(156, 199, 233); */
+  box-shadow: 
+  0 0 0 10px hsla(243, 89%, 48%, 0.624),
+  0 0 0 20px hsla(267, 61%, 63%, 0.51),
+  0 0 0 30px hsla(126, 86%, 20%, 0.735),
+  0 0 0 40px #fce303,
+  0 0 0 50px #f18576,
+  0 0 0 60px #f91e01,
+  0 0 0 80px rgba(144, 143, 143, 0.378);
+  margin: 0 auto; /*margin t, b, = rest is auto*. This line matter if is first or last */
+  margin-top: 80px; /*push the container down*/
+  text-align: center;
+  max-width: 700px;
+  border-radius: 50px;  /*rounded corners*/
+  padding: 35px; /*gives margins inside margins of box*/
+}
+
+form {
+  display: flex; /*the boxes to enter the info*/
+  justify-content: center; /* x-exes*/
+  align-items: center;
+  margin-bottom: 20px;
+
+}
+
+form input[type="text"]{
+  padding: 30px 20px;
+  border: none;
+  outline: none;
+  background-color: #f8fad2;
+  border-color: 2px solid black;
+  border: none;  /*no border to input the city name*/
+  font-size: 35px;
+  border-radius: 90px;
+  width: 60%; /*size of the input box*/
+}
+
+form input[type="submit"] {
+  background-color: #f8fad2;
+  color: #f21c00;
+  font-size: 38px;
+  border: none;
+  padding: 30px 20px;
+  border-radius: 90px;
+  cursor: pointer;
+  outline: rgb(174, 174, 37) none;
+  transition: background-color .3s ease;
+}  
+
+form input[type="submit"]:hoover { /*get weather button */
+  background-color: #a2f901;
+  transition: background-color .3s ease;
+}
+
+.icon img {
+  width: 100px;
+  height: 100px;
+  background-size: contain; /*to fit w/in container*/
+  background-repeat: no-repeat;
+  background-position: center center; /*vertical and horizontally*/
+}
+
+.temperature { 
+  font-size: 55px;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+.description {   /*sunny word*/
+  font-size: 55px;
+  margin: 30px;
+}
+
+.details {
+  font-size: 30px;
+  display: flex;  /*next to each other when possible*/
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; /*wrap if need make it response */
+}
+
+.details > div { /*all the divs*/
+  padding: 39px;
+  background-color: rgba(119, 117, 117, 0.395);
+  margin: 20px;
+  flex-wrap: wrap;
+  border-radius: 95px;
+  text-align: center;
+  min-height: 5px;
+}
+
+@media (max-width: 768px) {
+  form {
+    flex-direction: column;
+  }
+/* to cover all the pg */
+  form input[type="text"] {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
